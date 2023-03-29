@@ -1,0 +1,56 @@
+* {margin: 0;padding: 0;}
+ul {list-style: none}
+input {border-radius: 0;}
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {-webkit-appearance: none;appearance: none;margin: 0;}
+
+.wrapper{width: 375px;margin: 30px auto 0;}
+
+form{position: relative;width: 100%;height: 600px;padding: 15px;box-sizing: border-box;}
+
+fieldset {position: relative;display: flex;flex-direction: column;height: 75px;padding-top: 15px;border: 0;box-sizing: border-box;overflow: hidden;}
+
+fieldset.on {display: block;}
+fieldset.off {display: none;height: 0;}
+
+fieldset label {position: absolute;top: 25px;left: 0;font-size: 14px;color: gray;z-index: 100;will-change: transform;}
+fieldset input {display: flex;align-items: center;width: 100%;height: 36px;border: none;border-bottom: 1px solid gray;box-sizing: border-box;font-size: 16px;font-weight: bold;}
+fieldset input:focus {outline: none;}
+fieldset input:focus ~ .line-effect {width: 100%;}
+
+fieldset select {padding: 10px 0;border: none;border-bottom: 1px solid gray;}
+fieldset select:focus {outline: none;}
+fieldset select:focus ~ .line-effect {width: 100%;}
+
+fieldset .input-area {position: relative;display: flex;justify-content: space-between;}
+fieldset .input-area .input-box {position: relative;width: 43%;}
+fieldset .input-area .input-box .line-effect {bottom: 0;}
+fieldset .input-area .input-box:nth-of-type(2) {display: flex;align-items: center;}
+fieldset .input-area .input-box:nth-of-type(2) input {width: 10%;}
+fieldset .input-area .input-box:nth-of-type(2) .line-effect {left: 7px;}
+fieldset .input-area .input-box:nth-of-type(2) input:focus ~ .line-effect {left: 7px;width: 10%;}
+fieldset .input-area::after {content: '-';position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);font-size: 16px;font-weight: bold;}
+fieldset .input-area .private-dot {display: flex;align-items: center;width: 90%;height: 100%;}
+fieldset .input-area .private-dot .dot {width: 15px;height: 15px;margin-right: 2px;border-radius: 50%;background-color: gray;}
+
+fieldset .input-erase-btn {position: absolute;top: 43%;right: 0;transform: translateY(-50%);display: none;width: 20px;height: 20px;border: none;background: url(./icon-close.png) 50% 50% no-repeat;background-size: cover;}
+fieldset .input-erase-btn.active {display: block;}
+fieldset .line-effect {position: absolute;left: 50%;bottom: 24px;transform: translateX(-50%);width: 0;height: 2px;background-color: #3182f6;transition: width .4s ease;}
+
+.name-confirm-btn {position: fixed;left: 15px;bottom: 30px;right: 15px;transform: translate3d(0, 0, 0);height: 50px;border-radius: 10px;border:none;background-color: #3182f6;color: #fff;font-size: 16px;font-weight: 500;}
+.name-confirm-btn.off {display: none;}
+
+.temp-btn {position: fixed;left: 15px;bottom: 30px;right: 15px;transform: translate3d(0, 0, 0);height: 50px;border-radius: 10px;border:none;background-color: transparent;color: #fff;font-size: 16px;font-weight: 500;}
+
+.submit-btn {position: fixed;left: 15px;bottom: 30px;right: 15px;height: 50px;border-radius: 10px;border:none;background-color: #3182f6;color: #fff;font-size: 16px;font-weight: 500;}
+.submit-btn:disabled {opacity: 0.5;}
+.submit-btn.off {display: none;}
+
+.modal {position: fixed;top: 0;left: 0;display: none;width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.5);z-index: 9999;}
+.modal.open {display: block;}
+.modal.close {display: none;}
+.modal-content {position: absolute;bottom: 0;left: 0;width: 100%;height: fit-content;padding: 25px 15px;box-sizing:border-box;border-top-left-radius: 10px;border-top-right-radius: 10px;background-color: white;}
+.modal-header {margin-bottom: 30px;font-size: 16px;font-weight: bold;}
+
+.carrier-list-item {margin-bottom: 30px;color: #000;font-size: 14px;}
+.carrier-list-item:nth-last-of-type(1) {margin-bottom: 0;}
+.carrier-list-item > a {display: block;color: inherit;text-decoration: none;}
