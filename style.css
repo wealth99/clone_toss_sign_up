@@ -41,11 +41,11 @@ fieldset .line-effect {position: absolute;left: 50%;bottom: 24px;transform: tran
 
 .temp-btn {position: fixed;left: 15px;bottom: 30px;right: 15px;transform: translate3d(0, 0, 0);height: 50px;border-radius: 10px;border:none;background-color: transparent;color: #fff;font-size: 16px;font-weight: 500;}
 
-.submit-btn {position: fixed;left: 15px;bottom: 30px;right: 15px;height: 50px;border-radius: 10px;border:none;background-color: #3182f6;color: #fff;font-size: 16px;font-weight: 500;}
+.submit-btn {position: fixed;left: 15px;bottom: 30px;right: 15px;height: 50px;border-radius: 10px;border:none;background-color: #3182f6;color: #fff;font-size: 16px;font-weight: 500;z-index: 1000;}
 .submit-btn:disabled {opacity: 0.5;}
 .submit-btn.off {display: none;}
 
-.modal {position: fixed;top: 0;left: 0;display: none;width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.5);z-index: 9999;}
+.modal {position: fixed;top: 0;left: 0;display: none;width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.5);z-index: 2000;}
 .modal.open {display: block;}
 .modal.close {display: none;}
 .modal-content {position: absolute;bottom: 0;left: 0;width: 100%;height: fit-content;padding: 25px 15px;box-sizing:border-box;border-top-left-radius: 10px;border-top-right-radius: 10px;background-color: white;}
